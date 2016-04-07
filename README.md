@@ -1,5 +1,6 @@
 # openscad-LALRparser
 ##Description:
+
      This implements a LALR parsers a (x,y) coordinate list or list of shapes for
      use with Thingiverse's Customizer) into OpenSCAD Vector. Initially intended
      to specify holes or pins for circuit board mount point, or a list of shapes
@@ -7,10 +8,13 @@
      an ugly and clumsy exhaustive field driven interface.
 
 ##X,Y Coordinate Specification:
+
      List of coordinates in the form:
           (<x>, <y>) 
+     
      List can be specifed white space insensitive using any combination of 
      coordinate delimiters of <none>, "," or ";"
+     
      For example:
        (12.1, -13.32), ( 5, -27),(.30,-1.0)
        (3,2),(84.3,-2 ) , ( 11 , 1. 02)
@@ -21,12 +25,15 @@
      are discarded. e.g. "(1-1,0)" "(1.0.0,7)" "(.,.3)" "(1,2)(1" "()"
 
 ##Shape Specification:
+     
      List of shapes (circle, rectangle or square) as follows:
           cir(<diameter>)@(<x-center>,<y-center>)
           rec(<height>, <width>)@(<x-center>, <y-center>)
           sqr(<side>)@(<x-center>, <y-center>)
+     
      As with coordinates, list can be specifed white space insensitive using
      any combination of coordinate delimiters of <none>, "," or ";"
+     
      For example:
        cir(5)@(12.1, -13.32) rec( 5, -27) @ (.30,-1.0)
        rec (3,2) @(84.3,-2 ) , sqr( 11 ) @ ( - 2, 1. 02)
@@ -37,6 +44,7 @@
      discarded. e.g. "cir(1-1)@(1,1)" "sqr(1,1)*(1.0.1,6)" "rec(.,.3)@(1,1)"
 
 ##Notes:
+     
      This can be used as skeleton for different language parsers, but you
      need to hand edit not only the token, grammar and fsa tables but embed
      a bespoke _reduce function.
