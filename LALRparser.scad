@@ -23,11 +23,11 @@
 //     You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses/.
 //
 // Description:
-//     This implementation parsers (x,y) coordinate list (from Customizer) into
-//     a list of point or a list of shapes. Intended to specify circuit board
-//     mount point, or a list of shapes to cut out of an end panel. Developed 
-//     parser to allow free form input rather than use and ugly and clumsy
-//     exhaustive field driven interface.
+//     This implements a LALR parser that parses (x,y) coordinate list or list of 
+//     shapes for use with Thingiverse's Customizer into an OpenSCAD Vector. First
+//     intended to specify holes or pins for circuit board mount point, or a list of
+//     shapes to cut out of a panel. This parser allows free form input rather than
+//     using an ugly and clumsy exhaustive field driven interface.
 //
 // X,Y Coordinate Specification:
 //     List of coordinates in the form:
@@ -35,7 +35,7 @@
 //     List can be specifed white space insensitive using any combination of 
 //     coordinate delimiters of <none>, "," or ";"
 //     For example:
-//       (12.1, -13.32), ( 5, -27),(.30,-1.0)
+//       (12.1, -13.32) ( 5, -27)(.30,-1.0)
 //       (3,2),(84.3,-2 ) , ( 11 , 1. 02)
 //       ( 1 4, 2 7 . 0 5);(-  28.1,4) ;(-0 ,-.1  )
 // 
@@ -46,7 +46,7 @@
 // Shape Specification:
 //     List of shapes (circle, rectangle or square) as follows:
 //          cir(<diameter>)@(<x-center>,<y-center>)
-//          rec(<height>, <width>)@(<x-center>, <y-center>)
+//          rec(<width>, <height>)@(<x-center>, <y-center>)
 //          sqr(<side>)@(<x-center>, <y-center>)
 //     As with coordinates, list can be specifed white space insensitive using
 //     any combination of coordinate delimiters of <none>, "," or ";"
@@ -500,7 +500,6 @@ badString = "rec(5,4)@(11,- 2.1 cir(10)@(4.0,8.0)";
 echo(str("Parse of \"", badString, "\" is ", parse(badString)));
 longString = "abcdefg1234567";
 echo(str("Substring of \"", longString, "\" from 7 to end is ", substr(longString,7)));
-longString = "abcdefg1234567";
 echo(str("Substring of \"", longString, "\" from 5 for 4 is ", substr(longString,5,4)));
 intString = "-12";
 echo(str("Integer of \"", intString, "\" is ", int(intString)));
@@ -518,7 +517,6 @@ coord = 2;
 
 //parse the sample coord list string
 coordList = parse("(-20,-20) (-40,-40) (-80,-80)");
-echo(coordList);
 
 // show example as linear extrude
 if (coordList[type] == _coord) linear_extrude(height=20, center=true) {
