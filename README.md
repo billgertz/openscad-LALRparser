@@ -32,7 +32,7 @@ List of shapes (circle, rectangle or square) as follows:
 * sqr(*side*) @ (*x-center*, *y-center*)
      
 As with coordinates, list can be specifed white space insensitive using
-any combination of coordinate delimiters of <none>, "," or ";"
+any combination of coordinate delimiters of *none*, "," or ";"
      
 For example:
 * cir(5)@(12.1, -13.32) rec( 5, -27) @ (.30,-1.0)
