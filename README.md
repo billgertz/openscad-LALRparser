@@ -3,7 +3,7 @@ openscad-LALRparser
 Description
 ===========
 This implements a LALR parser that parses (x,y) coordinate list or list of 
-shapes for use with Thingiverse's Customizer into OpenSCAD Vector. Initially
+shapes for use with Thingiverse's Customizer into an OpenSCAD Vector. Initially
 intended to specify holes or pins for circuit board mount point, or a list of
 shapes to cut out of a panel. This parser allows free form input rather than
 using an ugly and clumsy exhaustive field driven interface.
