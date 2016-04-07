@@ -50,7 +50,7 @@ need to hand edit not only the token, grammar and fsa tables but embed
 a bespoke *_reduce* function.
 
 Unfortunaely the *_reduce* function must be declared for each LALR parser
-The function could be specified as a function when OpenSCAD v2.0 is 
+The function could be specified as a parameter when OpenSCAD v2.0 is 
 released, making this a true universal library. Until then edit the 
 *_reduce* fuction for your language and release as seperate language 
 specific library.
