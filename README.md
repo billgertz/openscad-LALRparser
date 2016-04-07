@@ -17,7 +17,7 @@ coordinate delimiters of *none*, "," or ";"
      
 For example:
 * (12.1, -13.32), ( 5, -27),(.30,-1.0)
-* (3,2),(84.3,-2 ) , ( 11 , 1. 02)
+* (3,2),(84.3,-2 ) , ( 11 , 1. 02)(12,12)
 * ( 1 4, 2 7 . 0 5);(-  28.1,4) ;(-0 ,-.1  )
  
 The engine tolerates wild spacing around numbers, and even odd number
