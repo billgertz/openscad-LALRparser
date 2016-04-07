@@ -10,7 +10,7 @@
 ##X,Y Coordinate Specification:
 
      List of coordinates in the form:
-          (<x>, <y>) 
+          (*<x>*, *<y>*) 
      
      List can be specifed white space insensitive using any combination of 
      coordinate delimiters of <none>, "," or ";"
@@ -27,9 +27,9 @@
 ##Shape Specification:
      
      List of shapes (circle, rectangle or square) as follows:
-          cir(<diameter>)@(<x-center>,<y-center>)
-          rec(<height>, <width>)@(<x-center>, <y-center>)
-          sqr(<side>)@(<x-center>, <y-center>)
+          cir(*<diameter>*) @ (*<x-center>*, *<y-center>*)
+          rec(*<width>*, *<height>*) @ (*<x-center>*, *<y-center>*)
+          sqr(*<side>*) @ (*<x-center>*, *<y-center>*)
      
      As with coordinates, list can be specifed white space insensitive using
      any combination of coordinate delimiters of <none>, "," or ";"
@@ -47,10 +47,10 @@
      
      This can be used as skeleton for different language parsers, but you
      need to hand edit not only the token, grammar and fsa tables but embed
-     a bespoke _reduce function.
+     a bespoke *_reduce* function.
 
      Unfortunaely the _reduce function must be declared for each LALR parser
      The _parser could be specified as a function when OpenSCAD v2.0 is 
      released, making this a true universal library. Until then edit the 
-     _reduce fuction for your language and release as seperate language 
+     *_reduce* fuction for your language and release as seperate language 
      specific library.
