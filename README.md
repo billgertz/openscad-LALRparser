@@ -10,8 +10,7 @@ using an ugly and clumsy exhaustive field driven interface.
 
 X,Y Coordinate Specification
 ============================
-List of coordinates in the form:
-     (*<x>*, *<y>*) 
+List of coordinates in the form: (*x*, *y*) 
      
 List can be specifed white space insensitive using any combination of 
 coordinate delimiters of <none>, "," or ";"
