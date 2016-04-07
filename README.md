@@ -1,7 +1,7 @@
 openscad-LALRparser
 ===================
-Description:
-============
+Description
+===========
 
      This implements a LALR parsers a (x,y) coordinate list or list of shapes for
      use with Thingiverse's Customizer) into OpenSCAD Vector. Initially intended
@@ -9,8 +9,8 @@ Description:
      to cut out of a panel. This parser allows free form input rather than using
      an ugly and clumsy exhaustive field driven interface.
 
-X,Y Coordinate Specification:
-=============================
+X,Y Coordinate Specification
+============================
 
      List of coordinates in the form:
           (*<x>*, *<y>*) 
@@ -27,8 +27,8 @@ X,Y Coordinate Specification:
      specifications, e.g. -0.0. However malformed lists and/or coordinates
      are discarded. e.g. "(1-1,0)" "(1.0.0,7)" "(.,.3)" "(1,2)(1" "()"
 
-Shape Specification:
-====================
+Shape Specification
+===================
      
      List of shapes (circle, rectangle or square) as follows:
           cir(*<diameter>*) @ (*<x-center>*, *<y-center>*)
@@ -47,8 +47,8 @@ Shape Specification:
      specifications, e.g. -0.0. However malformed lists and/or shapes are 
      discarded. e.g. "cir(1-1)@(1,1)" "sqr(1,1)*(1.0.1,6)" "rec(.,.3)@(1,1)"
 
-Notes:
-======
+Notes
+=====
      
      This can be used as skeleton for different language parsers, but you
      need to hand edit not only the token, grammar and fsa tables but embed
